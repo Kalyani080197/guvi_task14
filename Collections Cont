@@ -1,0 +1,136 @@
+1. Creating the com.example.hr package with the Employee class:
+// File: com/example/hr/Employee.java
+package com.example.hr;
+
+public class Employee {
+    private String name;
+    private int id;
+    private double salary;
+
+    public Employee(String name, int id, double salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+
+    public void printName() {
+        System.out.println("Employee Name: " + name);
+    }
+
+    public void printSalary() {
+        System.out.println("Employee Salary: " + salary);
+    }
+}
+Creating the com.example.hrtest package with the EmployeeTest class:
+// File: com/example/hrtest/EmployeeTest.java
+package com.example.hrtest;
+
+import com.example.hr.Employee;
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        // Create an instance of the Employee class
+        Employee emp = new Employee("John Doe", 12345, 75000.00);
+
+        // Call the methods to print the employee's name and salary
+        emp.printName();
+        emp.printSalary();
+    }
+}
+Main method and importing the com.example.hr package:
+
+This is handled in the EmployeeTest class by using the import statement.
+Compiling and running the program:
+
+Compile the files using the following commands in the terminal or command prompt:
+sh
+javac com/example/hr/Employee.java
+javac com/example/hrtest/EmployeeTest.java
+Run the EmployeeTest class:
+sh
+java com.example.hrtest.EmployeeTest
+Here's the complete directory structure you should follow for this to work:
+
+src
+│
+├── com
+│   ├── example
+│       ├── hr
+│       │   └── Employee.java
+│       └── hrtest
+│           └── EmployeeTest.java
+Make sure your directory structure matches the package names for Java to correctly compile and run the program.
+
+When you run the EmployeeTest class, the output should be:
+Employee Name: John Doe
+Employee Salary: 75000.0
+
+2. Java Program to Create and Remove Elements from an ArrayList
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of strings
+        ArrayList<String> list = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+        list.add("Date");
+
+        // Print the ArrayList
+        System.out.println("ArrayList before removal: " + list);
+
+        // Remove all elements from the ArrayList
+        list.clear();
+
+        // Print the ArrayList after removal
+        System.out.println("ArrayList after removal: " + list);
+    }
+}
+
+3. Java Program to Create a TreeMap of Employee IDs and Names
+import java.util.TreeMap;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+        // Create a TreeMap of employee IDs and names
+        TreeMap<Integer, String> employeeMap = new TreeMap<>();
+
+        // Add entries to the TreeMap
+        employeeMap.put(103, "John Doe");
+        employeeMap.put(101, "Alice Smith");
+        employeeMap.put(102, "Bob Johnson");
+
+        // Print the names of all employees in alphabetical order
+        System.out.println("Employee names in alphabetical order: ");
+        for (String name : employeeMap.values()) {
+            System.out.println(name);
+        }
+    }
+}
+
+4. Program to Convert List to Array
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListToArrayExample {
+    public static void main(String[] args) {
+        // Create a List
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        // Convert List to Array
+        String[] array = new String[list.size()];
+        array = list.toArray(array);
+
+        // Print the array
+        System.out.println("Array elements: ");
+        for (String element : array) {
+            System.out.println(element);
+        }
+    }
+}
